@@ -18,6 +18,11 @@ var app = new Vue({
             // resetta l'input todoItem
             this.todoItem = "";
             console.log(this.todoList);
+        },
+
+        // funzione che restituisce un nuovo array privo dell'elemento rimosso
+        handleDeleteItem: function(itemIndex) {
+            this.todoList = this.todoList.filter((el, i) => i !== itemIndex);
         }
     },
 })

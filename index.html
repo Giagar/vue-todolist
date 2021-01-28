@@ -18,7 +18,7 @@
 
         <!-- display lista todoList -->
         <ul>
-            <li v-for="todoItem in todoList">{{todoItem}}</li>
+            <li v-for="(todoItem, itemIndex) in todoList">{{todoItem}} <span class="deleteItem" @click="handleDeleteItem(itemIndex)">X</span></li>
         </ul>
 
     </div>
