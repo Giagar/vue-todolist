@@ -9,84 +9,91 @@ html {
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 19px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
 }
 
 .sectionPadding {
-    padding: 25px;
+  padding: 25px;
 }
 
 /* STYLE */
 header {
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    /* outline: 1px solid lightblue; */
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  /* outline: 1px solid lightblue; */
 }
 
 header .logo {
-    height: 100px;
-    vertical-align: middle;
+  height: 100px;
+  vertical-align: middle;
 }
 
-
-
 .userInput-container {
-    /* outline: 1px solid lightblue; */
-    /* width: 600px; */
-    margin: 0 auto;
-    text-align: center;
+  /* outline: 1px solid lightblue; */
+  /* width: 600px; */
+  margin: 0 auto;
+  text-align: center;
 }
 
 .userInput-container input {
-    height: 50px;
-    line-height: 50px;
-    padding-left: 25px;
-    width: 400px;
-    border-radius: 14px;
-    border: 1px solid hsl(0, 0%, 20%);
+  height: 50px;
+  line-height: 50px;
+  padding-left: 25px;
+  width: 400px;
+  border-radius: 14px;
+  border: 1px solid hsl(0, 0%, 20%);
 }
 
 .userInput-container button {
-    height: 50px;
-    line-height: 50px;
-    width: 150px;
-    border-radius: 14px;
-    border: 1px solid hsl(0, 0%, 20%);
-    margin-left: 15px;
+  height: 50px;
+  line-height: 50px;
+  width: 150px;
+  border-radius: 14px;
+  border: 1px solid hsl(0, 0%, 20%);
+  margin-left: 15px;
 }
 
-
-
-
 .todoList-container {
-    width: 550px;
-    margin: 0 auto;
+  width: 550px;
+  margin: 0 auto;
 }
 
 .todoList-container ul {
-    background-color: hsl(0, 0%, 97%);
-    border-radius: 14px;
-    list-style: none;
+  background-color: hsl(0, 0%, 97%);
+  border-radius: 14px;
+  list-style: none;
 }
 
 .todoList-container ul li {
-    width: 90%;
-    margin: 0 auto;
-    padding: 15px;
-    border-bottom: 1px solid lightgrey;
-    position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border-bottom: 1px solid lightgrey;
+  position: relative;
+}
+
+.todoList-container ul li:hover .deleteItem{
+  display: block
 }
 
 .todoList-container ul li .todoListItem {
-   
+    display: inline-block;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .todoList-container ul li .deleteItem {
-    position: absolute;
-    right: 15px; /* stesso di li.padding */
-    font-weight: bold;
+  position: absolute;
+  right: 15px; /* stesso di li.padding */
+  transform: translateY(-50%);
+  top: 50%;
+  font-weight: bold;
+  text-shadow: 0 0 4px red;
+  font-size: 32px;
+  cursor: pointer;
+  display: none;
 }
