@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+    <div id="root">
+        <!-- input che riceve il nuovo todo -->
+        <label for="newTodoItem">Scrivi:</label>
+        <input type="text" id="newTodoItem" name="newTodoItem" v-model="todoItem" @keyup.enter="handleAddNewItem">
+        <!-- pulsante che invia il nuovo to do a data -->
+        <button @click="handleAddNewItem">Submit</button>
+
+        <!-- display lista todoList -->
+        <ul>
+            <li v-for="todoItem in todoList">{{todoItem}}</li>
+        </ul>
+
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
