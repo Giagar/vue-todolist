@@ -1,3 +1,7 @@
+/* TODO
+_max input char numbers
+ */
+
 /* COMMONS AND UTILITIES */
 
 html {
@@ -5,9 +9,14 @@ html {
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+}
+
+.sectionPadding {
+    padding: 25px;
 }
 
 /* STYLE */
@@ -30,13 +39,11 @@ header .logo {
     /* width: 600px; */
     margin: 0 auto;
     text-align: center;
-    padding: 10px;
 }
 
 .userInput-container input {
     height: 50px;
     line-height: 50px;
-    font-size: 19px;
     padding-left: 25px;
     width: 400px;
     border-radius: 14px;
@@ -46,7 +53,6 @@ header .logo {
 .userInput-container button {
     height: 50px;
     line-height: 50px;
-    font-size: 19px;
     width: 150px;
     border-radius: 14px;
     border: 1px solid hsl(0, 0%, 20%);
@@ -56,3 +62,31 @@ header .logo {
 
 
 
+.todoList-container {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.todoList-container ul {
+    background-color: hsl(0, 0%, 97%);
+    border-radius: 14px;
+    list-style: none;
+}
+
+.todoList-container ul li {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    border-bottom: 1px solid lightgrey;
+    position: relative;
+}
+
+.todoList-container ul li .todoListItem {
+   
+}
+
+.todoList-container ul li .deleteItem {
+    position: absolute;
+    right: 15px; /* stesso di li.padding */
+    font-weight: bold;
+}

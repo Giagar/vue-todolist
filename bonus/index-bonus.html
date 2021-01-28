@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
     <link rel="stylesheet" href="./css/style-bonus.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
@@ -15,7 +16,7 @@
 
       <main>
         <!-- contiene input utente -->
-        <div class="userInput-container">
+        <div class="userInput-container sectionPadding">
           <!-- input che riceve il nuovo todo -->
           <input
             type="text"
@@ -29,11 +30,12 @@
           <button @click="handleAddNewItem">Aggiungi</button>
         </div>
 
-        <div class="todoList-container">
+          <!-- input che riceve il nuovo todo -->
+        <div class="todoList-container sectionPadding">
           <!-- lista todoList -->
-          <ul>
+          <ul class="sectionPadding">
             <li v-for="(todoItem, itemIndex) in todoList">
-              {{todoItem}}
+                <span class="todoListItem">{{todoItem}}</span>
               <span class="deleteItem" @click="handleDeleteItem(itemIndex)">X</span>
             </li>
           </ul>
