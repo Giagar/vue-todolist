@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="./css/style-bonus.css">
+    <link rel="stylesheet" href="./css/style-bonus.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="root" class="wrapper">
+      <header>
+        <img src="./img/logo.png" alt="logo" class="logo"/>
+      </header>
 
-    <div id="root">
-        <!-- input che riceve il nuovo todo -->
-        <label for="newTodoItem">Scrivi:</label>
-        <input type="text" id="newTodoItem" name="newTodoItem" v-model="todoItem" @keyup.enter="handleAddNewItem" placeholder="Fare la spesa">
-        <!-- pulsante che invia il nuovo to do a data -->
-        <button @click="handleAddNewItem">Submit</button>
+      <main>
+        <!-- contiene input utente -->
+        <div class="userInput-container">
+          <!-- input che riceve il nuovo todo -->
+          <input
+            type="text"
+            id="newTodoItem"
+            name="newTodoItem"
+            v-model="todoItem"
+            @keyup.enter="handleAddNewItem"
+            placeholder="Nuovo Todo"
+          />
+          <!-- pulsante che invia il nuovo to do a data -->
+          <button @click="handleAddNewItem">Aggiungi</button>
+        </div>
 
-        <!-- display lista todoList -->
-        <ul>
-            <li v-for="(todoItem, itemIndex) in todoList">{{todoItem}} <span class="deleteItem" @click="handleDeleteItem(itemIndex)">X</span></li>
-        </ul>
-
+        <div class="todoList-container">
+          <!-- lista todoList -->
+          <ul>
+            <li v-for="(todoItem, itemIndex) in todoList">
+              {{todoItem}}
+              <span class="deleteItem" @click="handleDeleteItem(itemIndex)">X</span>
+            </li>
+          </ul>
+        </div>
+      </main>
     </div>
-    
+
     <script src="./js/script-bonus.js"></script>
-</body>
+  </body>
 </html>
