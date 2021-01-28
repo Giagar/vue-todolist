@@ -18,12 +18,15 @@
         <!-- contiene input utente -->
         <div class="userInput-container sectionPadding">
           <!-- input che riceve il nuovo todo -->
+          <!-- <div class="tooltipUserError"></div> -->
           <input
             type="text"
             id="newTodoItem"
+            class=""
             name="newTodoItem"
             v-model="todoItem"
             @keyup.enter="handleAddNewItem"
+            @keypress="resetUserErrors"
             placeholder="Nuovo Todo"
           />
           <!-- pulsante che invia il nuovo to do a data -->
